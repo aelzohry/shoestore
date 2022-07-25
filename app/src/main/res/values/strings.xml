@@ -8,5 +8,14 @@
     <string name="register_button">Register</string>
     <string name="password_input_description">Enter password</string>
     <string name="email_input_description">Enter email</string>
+    <!-- Welcome Screen   -->
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_details">To Shoe Store app, which gives you the ability to add shoes to a simple list</string>
+    <string name="next_button">Next</string>
+    <!-- Instructions Screen   -->
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_details">Press + to add new shoe to the list and have fun</string>
     <!--    -->
 </resources>

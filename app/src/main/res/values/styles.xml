@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OnBoardingTitleStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="OnBoardingDetailsStyle">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+</resources>

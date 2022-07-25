@@ -1,4 +1,4 @@
-package com.udacity.aelzohry.shoestore.screens.login
+package com.udacity.aelzohry.shoestore.screens.onboarding.welcome
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,18 +8,18 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.udacity.aelzohry.shoestore.R
-import com.udacity.aelzohry.shoestore.databinding.FragmentLoginBinding
+import com.udacity.aelzohry.shoestore.databinding.FragmentWelcomeBinding
 
-class LoginFragment : Fragment() {
+class WelcomeFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: FragmentWelcomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
         return binding.root
     }
 
@@ -27,21 +27,12 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Setup click listeners
-        binding.loginButton.setOnClickListener { onLogin() }
-        binding.registerButton.setOnClickListener { onRegister() }
+        binding.nextButton.setOnClickListener { onNext() }
     }
 
-    private fun onLogin() {
-        onAuthenticationSucceed()
-    }
-
-    private fun onRegister() {
-        onAuthenticationSucceed()
-    }
-
-    private fun onAuthenticationSucceed() {
-        // Go To Welcome Screen
-        val destination = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment()
+    private fun onNext() {
+        // Go to instructions screen
+        val destination = WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment()
         findNavController().navigate(destination)
     }
 
