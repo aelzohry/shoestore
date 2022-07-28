@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.udacity.aelzohry.shoestore.R
 import com.udacity.aelzohry.shoestore.databinding.FragmentInstructionsBinding
 
@@ -30,7 +31,7 @@ class InstructionsFragment : Fragment() {
     }
 
     private fun onNext() {
-
+        findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment())
     }
 
 }

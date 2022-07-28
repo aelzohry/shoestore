@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.aelzohry.shoestore.screens.shoelist.ShoeListViewModel" />
+    </data>
+
+    <!-- using ConstraintLayout for it's flexibility to arrange elements on screen relatively to each other or parent and for the performance -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.shoelist.ShoeListFragment">
+
+        <ScrollView
+            android:id="@+id/list_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/shoe_list_content_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/list_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/empty_list_text_view"
+            style="@style/EmptyListStateTextStyle"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_shoe_list"
+            android:visibility="@{viewModel.shoeListEmpty}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:contentDescription="@string/add_new_show_content_description"
+            android:onClick="@{() -> viewModel.onAdd()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add_24"
+            tools:ignore="ImageContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

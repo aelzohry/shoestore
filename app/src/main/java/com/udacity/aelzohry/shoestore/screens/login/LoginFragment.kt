@@ -9,8 +9,15 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.udacity.aelzohry.shoestore.R
 import com.udacity.aelzohry.shoestore.databinding.FragmentLoginBinding
+import com.udacity.aelzohry.shoestore.extensions.hideKeyboard
 
 class LoginFragment : Fragment() {
+
+    /* I didn't create & use ViewModel and LiveData because there's nothing happens here
+        (no validating, no real authentication),
+        just a click listener to go to the next screen (onboarding)
+        The same thing in other screens
+     */
 
     private lateinit var binding: FragmentLoginBinding
 
@@ -32,10 +39,12 @@ class LoginFragment : Fragment() {
     }
 
     private fun onLogin() {
+        hideKeyboard()
         onAuthenticationSucceed()
     }
 
     private fun onRegister() {
+        hideKeyboard()
         onAuthenticationSucceed()
     }
 

@@ -11,11 +11,27 @@
     <!-- Welcome Screen   -->
     <string name="welcome_title">Welcome</string>
     <string name="welcome">Welcome</string>
-    <string name="welcome_details">To Shoe Store app, which gives you the ability to add shoes to a simple list</string>
+    <string name="welcome_details">to the Shoe Store app,\nwhich gives you the ability to\nadd/delete shoes to a simple but nice list</string>
     <string name="next_button">Next</string>
     <!-- Instructions Screen   -->
     <string name="instructions_title">Instructions</string>
     <string name="instructions">Instructions</string>
-    <string name="instructions_details">Press + to add new shoe to the list and have fun</string>
+    <string name="instructions_details">View shoe list\nTap + to add new shoe\nLong tap the shoe to remove\nHave fun :)</string>
+    <!-- Shoe List Screen   -->
+    <string name="shoe_list_content_description">Shoe List</string>
+    <string name="shoe_image_content_description">Shoe Image</string>
+    <string name="add_new_show_content_description">Add New Shoe</string>
+    <string name="empty_shoe_list">No shoes on the list\nTap + to add one\nLong press shoe to remove it</string>
+    <string name="shoe_list_title">Shoe List</string>
+    <string name="logout">Logout</string>
+    <!-- Shoe Details Screen   -->
+    <string name="shoe_details_title">Shoe Details</string>
+    <string name="complete_all_fields">Complete all fields</string>
+    <string name="shoe_name_input">Name</string>
+    <string name="shoe_company_input">Company</string>
+    <string name="shoe_size_input">Size</string>
+    <string name="shoe_description_input">Description</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
     <!--    -->
 </resources>
